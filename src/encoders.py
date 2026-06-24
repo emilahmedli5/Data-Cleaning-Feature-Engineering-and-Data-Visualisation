@@ -83,10 +83,7 @@ class TargetEncoder(BaseEstimator, TransformerMixin):
         return out_df.values
 
     def fit_transform(self, X, y):
-        """
-        The Leakage Defender: Computes out-of-fold target encoding for the Training set 
-        so the regression model doesn't just memorize its own labels.
-        """
+    
         X_df = pd.DataFrame(X).copy()
         y_arr = np.array(y)
         
